@@ -1,1 +1,37 @@
-<p>🪱</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>SE1400 Assignmnet Files</title>
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; background-color: #f4f4f9; color: #333; }
+        header { background: #ddf2b6; color: white; padding: 10px 0; text-align: center; }
+        section { max-width: 800px; margin: 20px auto; padding: 20px; background: white; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); }
+        h1, h2 { color: #333; font-family: 'Times New Roman', Times, serif; font-style: italic; }
+        ul { list-style: none; padding: 0; }
+        ul li { margin: 5px 0; }
+        ul li a { color: #026c99; text-decoration: none; font-weight: bold; }
+        ul li a:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 10px; margin-top: 20px; background: #333; color: white; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>SE-1400 Course Homepage</h1>
+    </header>
+    <section>
+        <h2>About Me</h2>
+        <hr>
+        <p>Hi! I'm Katie Turk. I love programming and I've thrown together some ramshackle HTML sites in my own time, but I've never properly learnt how to code a good website and my knowledge is full of holes. I hope to gain the experience I want from this class! Maybe someday I'll understand what a flexbox is.</p>
+        <hr>
+    </section>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
