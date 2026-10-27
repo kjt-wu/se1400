@@ -1,0 +1,38 @@
+.page-grid {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+header {
+    background-color: rgba(255, 0, 0, 0.3);
+    grid-column: 1 / -1;
+}
+
+nav {
+    background-color: rgba(255, 132, 0, 0.3);
+}
+
+main {
+    background-color: rgba(255, 251, 0, 0.3);
+    grid-column: 1 / -1;
+    padding: 10px;
+}
+
+footer {
+    background-color: rgba(0, 247, 255, 0.3);
+    grid-column: 1 / -1;
+}
+
+#imagegrid {
+    background-color: rgba(0, 255, 4, 0.3);
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 850px;
+    text-align: center;
+}
+
+#imagegrid div {
+    aspect-ratio: 1 / 1;
+    background-color: rgba(0, 30, 255, 0.3);
+}
