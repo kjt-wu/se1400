@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Funnel+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    background-color: #fff5f5;
+    color: #301717;
+    font-family: 'Funnel Sans', sans-serif;
+    margin: 0px;
+    padding: 5px;
+}
+
+.page-grid {
+    display: grid;
+    grid-template-columns: minmax(0px, 1fr) repeat(6, minmax(0, 175px)) minmax(0px, 1fr);
+}
+
+header {
+    grid-column: 1 / -1;
+}
+
+nav {
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: black;
+    font-family: 'Fraunces', serif;
+    font-size: 1.3rem;
+    font-style: italic;
+    position: relative;
+    text-decoration: none;
+    margin: 0px 5px 5px 5px;
+}
+
+nav a::after { /* This code taken from the labs */
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #F1ABAC;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: center;
+}
+
+hr {
+    background-image: repeating-linear-gradient(90deg, #F1ABAC 0, #F1ABAC 15px, #BE6A6B 15px, #BE6A6B 20px); /* I'd like to make this start from the center and grow out equally in both directions instead of just growing from the right? Is this possible?*/
+    border: 0px;
+    border-radius: 10px;
+    height: 15px;
+}
+
+main {
+    display: grid;
+    grid-column: 1 / -1;
+    grid-template-columns: subgrid;
+    padding: 10px;
+}
+
+#home_about {
+    grid-column: 2 / -2;
+}
+
+#home_about img {
+    float: left;
+    width: clamp(5rem, 15vw, 15rem);
+    padding: 1rem;
+}
+
+#imagegrid {
+    display: grid;
+    gap: 20px;
+    grid-area: 2 / 2 / 3 / -2;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin: auto;
+    max-width: 850px;
+    width: 100%;
+}
+
+#imagegrid div {
+    aspect-ratio: 1 / 1;
+    background-color: #BE6A6B;
+    background-position: center;
+    background-size: cover;
+    color: #fff5f5;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    padding: 10px;
+}
+
+#imagegrid div:first-child {
+    background-image: url(img/bg_worm.jpg);
+}
+
+#imagegrid div:nth-child(3) {
+    background-image: url(img/bg_gummiworms.jpg);
+}
+
+#imagegrid div:nth-child(5) {
+    background-image: url(img/bg_hats.jpg);
+}
+
+#product_intro {
+    grid-area: 3 / 2 / 4 / -2;
+}
+
+footer {
+    font-style: italic;
+    grid-column: 1 / -1;
+    text-align: center;
+}
+
+h1, h2 {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    color: #BE6A6B;
+    font-weight: normal;
+}
+
+a {
+    color: #BE6A6B;
+}
